@@ -1,0 +1,154 @@
+﻿@model LoginViewModel
+
+@{
+
+    ViewData["Title"] = "Connexion - EMSI AI";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMSI AI - Connexion</title>
+
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <!-- LEFT SECTION -->
+        <section class="welcome-section">
+
+            <div class="brand">
+                <span>Chat Bot A.I <strong>G6</strong></span>
+            </div>
+
+            <div class="welcome-content">
+                <span class="tag">VOTRE ASSISTANT INTELLIGENT</span>
+
+                <h1>
+                    L'intelligence<br>
+                    au service de<br>
+                    <span>votre réussite.</span>
+                </h1>
+
+                <p>
+                    Découvrez une nouvelle façon d'accéder aux
+                    informations de votre école. Votre assistant
+                    intelligent EMSI est là pour vous accompagner
+                    tout au long de votre parcours académique.
+                </p>
+
+                <div class="features">
+                    <div class="feature">
+                        <span class="feature-icon">✦</span>
+                        <div>
+                            <h3>Assistance intelligente</h3>
+                            <p>Obtenez des réponses rapidement.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-icon">⌘</span>
+                        <div>
+                            <h3>Accès simplifié</h3>
+                            <p>Toutes vos informations au même endroit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-footer">
+                <span>© 2026 EMSI AI</span>
+                <span>Excellence • Innovation • Technologie</span>
+            </div>
+
+        </section>
+
+        <!-- RIGHT SECTION -->
+        <section class="form-section">
+
+            <div class="form-wrapper">
+
+                <div class="mobile-brand">
+                    <img src="~/images/emsi-logo.png" alt="EMSI Logo">
+                    <span>EMSI <strong>AI</strong></span>
+                </div>
+
+                <div class="form-heading">
+                    <span class="welcome-label">BIENVENUE</span>
+                    <h2>Connexion</h2>
+                    <p>Connectez-vous pour accéder à votre assistant EMSI.</p>
+                </div>
+
+                <form asp-controller="login" asp-action="index" method="post">
+
+
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">✉</span>
+                            <input type="email"
+                                   id="login"
+                                   name="login"
+                                   placeholder="exemple@emsi.ma"
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">♙</span>
+                            <input type="password"
+                                   id="password"
+                                   name="Password"
+                                   placeholder="Entrez votre mot de passe"
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember">
+                            <input type="checkbox" name="RememberMe">
+                            <span>Se souvenir de moi</span>
+                        </label>
+
+                        <a href="#" class="forgot-password">
+                            Mot de passe oublié ?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        Se connecter
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+                <div class="security-note">
+                    <span>🔒</span>
+                    <p>Votre connexion est sécurisée et vos données sont protégées.</p>
+                </div>
+
+                <div class="form-footer">
+                    <p>© 2026 École Marocaine des Sciences de l'Ingénieur</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

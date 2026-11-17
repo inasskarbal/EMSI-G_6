@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web</title>
+    <script type="importmap"></script>
+
+
+
+    <link rel="stylesheet" href="~/css/conversation.css" asp-append-version="true" />
+
+</head>
+<body>
+    <div class="chat-page">
+
+        <!-- SIDEBAR -->
+        <aside class="chat-sidebar">
+            <div class="sidebar-header">
+                <h2>AI Assistant</h2>
+                <button class="new-chat-btn">
+                    + Nouvelle conversation
+                </button>
+            </div>
+
+            <div class="chat-history">
+                <div class="history-item active">
+                    Analyse des données
+                </div>
+
+                <div class="history-item">
+                    Gestion RH
+                </div>
+
+                <div class="history-item">
+                    Support utilisateur
+                </div>
+            </div>
+        </aside>
+
+        
+            @RenderBody()
+    </div>
+
+       
+</body>
+
+</html>
